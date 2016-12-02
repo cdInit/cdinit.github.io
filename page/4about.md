@@ -1,3 +1,14 @@
+---
+layout: page
+title: About
+permalink: /about/
+icon: heart
+---
+
+* content
+{:toc}
+
+## 关于我
 # Web前端程序员简历模板
 
 本简历模板由国内首家互联网人才拍卖网站「 [JobDeer.com](http://www.jobdeer.com) 」提供。
@@ -209,3 +220,6 @@
 
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
+## Comments
+
+{% include comments.html %}
