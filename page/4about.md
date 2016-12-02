@@ -9,7 +9,6 @@ icon: heart
 {:toc}
 
 ## 关于我
-# Web前端程序员简历模板
 
 本简历模板由国内首家互联网人才拍卖网站「 [JobDeer.com](http://www.jobdeer.com) 」提供。
 
@@ -220,6 +219,10 @@ icon: heart
 
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
+## 友情链接
+
+[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/) \| [zchen9](http://www.chen9.info/) \| [wuhuaji](http://wuhuaji.me/) \| [lisheng](http://www.lishengcn.cn/) \| [薛彬XueBin](http://axuebin.com/blog/) \| [TBOOX](http://www.tboox.org/cn/) 
+
 ## Comments
 
 {% include comments.html %}
