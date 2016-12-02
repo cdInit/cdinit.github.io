@@ -1,71 +1,37 @@
-<!doctype html>
-<html lang="en">
-{% include head.html %}
-<body>
-  <main role="main">
-    <div class="grid grid-centered">
-      <div class="grid-cell">
-        {% include navigation.html %}
-        <article class="article reveal">
-          <header class="article-header">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
-            <div class="article-list-footer">
-              <span class="article-list-date">
-                {{ page.date | date: "%B %-d, %Y" }}
-              </span>
-              <span class="article-list-divider">-</span>
-              <span class="article-list-minutes">
-                {% capture words %}
-                  {{ page.content | number_of_words }}
-                {% endcapture %}
-                {% unless words contains "-" %}
-                  {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
-                {% endunless %}
-              </span>
-              <span class="article-list-divider">-</span>
-              <div class="article-list-tags">
-                {% for tag in page.tags %}
-                  <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
-                {% endfor %}
-              </div>
-            </div>
-          </header>
-
-          <div class="article-content">
-            {{ content }}
-          </div>
-
-          <div class="article-share">
-            {% assign page_title = page.title  | truncate '110' %}
-            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status={{ page_title }} - {{ page.url | absolute_url }} {% if site.social.twitter %}by @{{ site.social.twitter }}{% endif %}', 'newwindow', 'width=500, height=225'); return false;">
-              <span class="icon icon-social-twitter"></span>
-            </a>
-            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}', 'newwindow', 'width=500, height=500'); return false;">
-              <span class="icon icon-social-facebook"></span>
-            </a>
-            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url={{ page.url | absolute_url }}', 'newwindow', 'width=550, height=400'); return false;">
-              <span class="icon icon-social-googleplus"></span>
-            </a>
-          </div>
-
-          {% if site.discus_identifier %}
-            <div id="disqus_thread" class="article-comments"></div>
-            <script>
-              (function() {
-                  var d = document, s = d.createElement('script');
-                  s.src = '//{{ site.discus_identifier }}.disqus.com/embed.js';
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-              })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          {% endif %}
-        </article>
-        {% include footer.html %}
-      </div>
+---
+layout: default
+---
+<div class="row">
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-area post">
+      <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+      <hr>
+      <article>
+        {{content}}
+      </article>
+      <hr>
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
     </div>
-  </main>
-  {% include javascripts.html %}
-</body>
-</html>
+    <div class="post-area post comment">
+      <!-- 多说评论框 start -->
+      
+      <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="gaohaoyang.github.io{{ page.url }}"></div>
+      
+      <!-- 多说评论框 end -->
+    </div>
+  </div>
+
+  <div id="content" class="col-sm-3">
+    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+</div>
