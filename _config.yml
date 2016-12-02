@@ -3,7 +3,7 @@
 name: Chalk
 paginate: 25
 paginate_path: "/posts/page/:num/"
-url: "http://www.cdinit.com"
+url: "http://cdinit.github.io"
 blog_theme: light # Or use dark
 
 # Optional settings
