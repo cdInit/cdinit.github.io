@@ -1,77 +1,59 @@
-![](_assets/images/documentation/chalk-intro@2x.png)
+## Voyager
 
-Chalk is a high quality, completely customizable, performant and 100% free blog template for Jekyll.
+Just another jekyll theme. Demo: <http://redvi.github.io/voyager>
 
-## Overview
+### Feathures:
 
-Features:
-  - Dark and Light theme.
-  - Filter on tags.
-  - customizable pagination.
-  - Beautified link sharing in Facebook and other social media.
-  - Automatic time to read post indicator.
-  - Automatic RSS feed.
-  - About page.
-  - 404 page.
-  - SEO optimized.
-  - PageSpeed optimized.
-  - Cross browser support (supports all modern browsers).
-  - Media embed for videos.
-  - Enlarge images on click (like Medium).
+All HTML files are compressed (see `_layouts/compress.html`).
 
-Integrations
-  - [Google Analytics](https://analytics.google.com/analytics/web/)
-  - [Google Fonts](https://fonts.google.com/)
-  - [Disqus](https://disqus.com/)
-  - [Ionicons](http://ionicons.com/)
-  - Social media links
+**Post**
 
-Used tools
-  - [Autoprefixer](https://github.com/postcss/autoprefixer)
-  - [Bower](http://bower.io/)
-  - [Circle CI](https://circleci.com/)
-  - [Html-proofer](https://github.com/gjtorikian/html-proofer)
-  - [Jekyll](http://jekyllrb.com/)
-  - [Jekyll assets](https://github.com/jekyll/jekyll-assets)
-  - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap)
-  - [HTML5 Boilerplate](https://html5boilerplate.com/) (Influenced by)
-  - [Kickster](http://kickster.nielsenramon.com/)
-  - [Retina.js](http://imulus.github.io/retinajs/)
-  - [STACSS](http://stacss.nielsenramon.com/)
+All post settings can be changed. Example:
 
-## Usage
+```
+---
+layout: post
+bg: '2016/background.jpg'
+title: "Post Heading"
+crawlertitle: "page title"
+summary: "post description"
+date: 2016-06-29
+tags : ['front-end']
+slug: post-url
+author: "Author"
+categories: posts
+---
+```
 
-### Installation
+`bg` is a path to background of your article. By default backgrounds are placed in the `assets/images` directory.
 
-If you haven't installed Ruby then go ahead and install it with: `brew install Ruby`.
-Next setup your environment:
+**Page**
 
-    bin/setup
+If page contains `active` tag, it will be show on site menu.
 
-### Development
+```
+---
+layout: page
+title: "About"
+permalink: /about/
+active: about
+---
+```
 
-Run Jekyll:
+**Archive**
 
-    bundle exec jekyll serve
+Archive page is sorting posts by tags. No more than one tag in one post.
 
-### Deploy to GitHub Pages
+Good:
 
-Run this in the root project folder in your console:
+```
+tags : ['front-end']
+```
 
-    bin/deploy
+Bad:
 
-You can find more info on how to use the gh-pages branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+```
+tags : ['front-end', 'jekyll']
+```
 
-[View this](https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci) for more info about automated deployment with Circle CI.
-
-## License
-
-MIT License
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/chalk/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Don't forget to change `_config.yml`.
