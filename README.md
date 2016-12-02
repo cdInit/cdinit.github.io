@@ -1,59 +1,32 @@
-## Voyager
+# About
 
-Just another jekyll theme. Demo: <http://redvi.github.io/voyager>
+This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-### Feathures:
+You can visit [here](http://gaohaoyang.github.io) to see this blog.
 
-All HTML files are compressed (see `_layouts/compress.html`).
-
-**Post**
-
-All post settings can be changed. Example:
-
-```
 ---
-layout: post
-bg: '2016/background.jpg'
-title: "Post Heading"
-crawlertitle: "page title"
-summary: "post description"
-date: 2016-06-29
-tags : ['front-end']
-slug: post-url
-author: "Author"
-categories: posts
----
-```
 
-`bg` is a path to background of your article. By default backgrounds are placed in the `assets/images` directory.
+这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
 
-**Page**
+博客访问地址：[点击这里](http://gaohaoyang.github.io)
 
-If page contains `active` tag, it will be show on site menu.
+**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-```
----
-layout: page
-title: "About"
-permalink: /about/
-active: about
----
-```
+<!--
 
-**Archive**
+## 被引用信息
 
-Archive page is sorting posts by tags. No more than one tag in one post.
+使用了我的模板并写明来源的人：   
 
-Good:
+* [dreamholy](http://dreamholy.github.io/)
 
-```
-tags : ['front-end']
-```
+没有注明来源的人：
 
-Bad:
+* [yangshuailing](http://yangshuailing.github.io/com/)
+* [huapu728](http://huapu728.github.io/)
+* [greatbuger](http://greatbuger.github.io/) 
 
-```
-tags : ['front-end', 'jekyll']
-```
 
-Don't forget to change `_config.yml`.
+-->
+
+
