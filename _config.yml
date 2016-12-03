@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: cdInit
-brief-intro: Front-end Dev Engineer
+title: Init.Sun
+brief-intro: Chengdu.Sichuan
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cdinit.github.io" # the base hostname & protocol for your site
 
@@ -28,7 +28,7 @@ description_footer: 本站记录我与前端的故事！
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: cdInitblog
+duoshuo_shortname: cdinit
 disqus_shortname: #gaohaoyang
 
 # statistic analysis 统计代码
