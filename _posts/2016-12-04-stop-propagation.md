@@ -53,7 +53,7 @@ oA.onlick = function(){
 阻止冒泡：当前要阻止冒泡的事件函数中调用 event.stopPropagation()或event.cancelBubble = true(兼容ie8);
 
 封装一个方法：
-```
+``` sh
 function stopBubble(ev){
     if(ev&&ev.stopPropagation){
         ev.stopPropagation();
