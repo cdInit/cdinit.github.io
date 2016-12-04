@@ -55,6 +55,7 @@ oA.onlick = function(){
 封装一个方法：
 
 ``` sh
+<script>
 function stopBubble(ev){
     if(ev&&ev.stopPropagation){
         ev.stopPropagation();
