@@ -20,11 +20,14 @@ author: Init
 
 
 ## 直接绑定
+
 ``` sh
 document.getElementById('test').onclick = function(){
   ...
 }
 ```
+
+这种绑定会覆盖之前的事件绑定。
 
 ## addEventListener的第三个参数
 
