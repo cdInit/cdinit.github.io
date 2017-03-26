@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "servlet中forword请求转发小结"
+title:  "servlet中redirect请求转发小结"
 categories: java
 tags: java
 author: Init
