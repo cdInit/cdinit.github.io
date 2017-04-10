@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "vue中使用"
+title:  "vue中使用filter"
 categories: vue
 tags: vue
 author: Init
