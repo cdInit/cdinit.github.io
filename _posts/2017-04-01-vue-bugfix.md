@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "vue中使用"
-categories: java
-tags: java
+categories: vue
+tags: vue
 author: Init
 ---
 
