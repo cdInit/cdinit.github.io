@@ -76,68 +76,53 @@ MongoDB没有创建数据库的命令，但有类似的命令。
 > db.repairDatabase();
 
 * 查看当前使用的数据库
-
 > db.getName();
-
   > db; db和getName方法是一样的效果，都可以查询当前使用的数据库
 
 * 显示当前db状态
 > db.stats();
 
 * 当前db版本
-
 > db.version();
 
 * 查看当前db的链接机器地址
-
 > db.getMongo();
 
 ### Collection聚集集合
 
 * 创建一个聚集集合（table）
-
 > db.createCollection(“collName”, {size: 20, capped: 5, max: 100});
 
 * 得到指定名称的聚集集合（table）
-
 > db.getCollection("account");
 
 * 得到当前db的所有聚集集合
-
 > db.getCollectionNames();
 
 * 显示当前db所有聚集索引的状态
-
 > db.printCollectionStats();
 
 ### 用户相关
 
 * 添加一个用户
-
 > db.addUser("name");
-
   > db.addUser("userName", "pwd123", true); 添加用户、设置密码、是否只读
 
 * 数据库认证、安全模式
-
 > db.auth("userName", "123123");
 
 * 显示当前所有用户
-
 > show users;
 
 * 删除用户
-
 > db.removeUser("userName");
 
 ### 其他
 
 * 查询之前的错误信息
-
 > db.getPrevError();
 
 * 清除错误记录
-
 > db.resetError();
 
  
@@ -405,31 +390,23 @@ db.userInfo.find({sex: {$exists: true}}).count();
 ## 索引
 
 1. 创建索引
-
 > db.userInfo.ensureIndex({name: 1});
 
   > db.userInfo.ensureIndex({name: 1, ts: -1});
 
 2. 查询当前聚集集合所有索引
-
 > db.userInfo.getIndexes();
 
 3. 查看总索引记录大小
-
 > db.userInfo.totalIndexSize();
 
-
 4. 读取当前集合的所有index信息
-
 > db.users.reIndex();
 
-
 5. 删除指定索引
-
 > db.users.dropIndex("name_1");
 
 6. 删除所有索引索引
-
 > db.users.dropIndexes();
 
 ## 修改、添加、 删除集合数据
