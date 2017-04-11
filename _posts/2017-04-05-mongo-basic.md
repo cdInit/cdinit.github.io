@@ -46,9 +46,13 @@ MongoDB没有创建数据库的命令，但有类似的命令。
 
 * Help查看命令提示
 > help
+
 > db.help();
+
 > db.yourColl.help();
+
 > db.youColl.find().help();
+
 > rs.help();
 
 * 切换/创建数据库
@@ -59,6 +63,12 @@ MongoDB没有创建数据库的命令，但有类似的命令。
 
 * 删除当前使用数据库
 > db.dropDatabase();
+
+* 从指定主机上克隆数据库
+> db.cloneDatabase(“127.0.0.1”); 将指定机器上的数据库的数据克隆到当前数据库
+
+* 从指定的机器上复制指定数据库数据到某个数据库
+> 
 
 ## mongdb学习地址
 [菜鸟教程学习mongdb](http://www.runoob.com/mongodb/mongodb-tutorial.html)
