@@ -47,13 +47,13 @@ MongoDB没有创建数据库的命令，但有类似的命令。
 * Help查看命令提示
 > help
 
-> db.help();
+  > db.help();
 
-> db.yourColl.help();
+  > db.yourColl.help();
 
-> db.youColl.find().help();
+  > db.youColl.find().help();
 
-> rs.help();
+  > rs.help();
 
 * 切换/创建数据库
 > use yourDB;  当创建一个集合(table)的时候会自动创建当前数据库
