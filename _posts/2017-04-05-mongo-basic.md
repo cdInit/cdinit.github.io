@@ -161,7 +161,7 @@ MongoDB没有创建数据库的命令，但有类似的命令。
 
 ## 聚集集合查询
 
-1. 查询所有记录
+* 查询所有记录
 
 ``` sh
 
@@ -175,7 +175,7 @@ db.userInfo.find();
 
 ```
  
-2. 查询去掉后的当前聚集集合中的某列的重复数据
+* 查询去掉后的当前聚集集合中的某列的重复数据
 
 ``` sh
 
@@ -187,7 +187,7 @@ db.userInfo.distinct("name");
 
 ```
 
-3. 查询age = 22的记录
+* 查询age = 22的记录
 
 ``` sh
 
@@ -197,7 +197,7 @@ db.userInfo.find({"age": 22});
 
 ```
  
-4. 查询age > 22的记录
+* 查询age > 22的记录
 
 ``` sh
 
@@ -207,7 +207,7 @@ db.userInfo.find({age: {$gt: 22}});
 
 ```
 
-5. 查询age < 22的记录
+* 查询age < 22的记录
 
 ``` sh
 
@@ -217,7 +217,7 @@ db.userInfo.find({age: {$lt: 22}});
 
 ```
 
-6. 查询age >= 25的记录
+* 查询age >= 25的记录
 
 ``` sh
 
@@ -227,7 +227,7 @@ db.userInfo.find({age: {$gte: 25}});
 
 ```
 
-7. 查询age <= 25的记录
+* 查询age <= 25的记录
 
 ``` sh
 
@@ -235,7 +235,7 @@ db.userInfo.find({age: {$lte: 25}});
 
 ```
 
-8. 查询age >= 23 并且 age <= 26
+* 查询age >= 23 并且 age <= 26
 
 ``` sh
 
@@ -243,7 +243,7 @@ db.userInfo.find({age: {$gte: 23, $lte: 26}});
 
 ```
 
-9. 查询name中包含 mongo的数据
+* 查询name中包含 mongo的数据
 
 ``` sh
 
@@ -255,7 +255,7 @@ select * from userInfo where name like ‘%mongo%’;
 
 ```
  
-10. 查询name中以mongo开头的
+* 查询name中以mongo开头的
 
 ``` sh
 
@@ -265,7 +265,7 @@ select * from userInfo where name like ‘mongo%’;
 
 ```
 
-11. 查询指定列name、age数据
+* 查询指定列name、age数据
 
 ``` sh
 
@@ -277,7 +277,7 @@ db.userInfo.find({}, {name: 1, age: 1});
 
 ```
  
-12. 查询指定列name、age数据, age > 25
+* 查询指定列name、age数据, age > 25
 
 ``` sh
 
@@ -287,7 +287,7 @@ db.userInfo.find({age: {$gt: 25}}, {name: 1, age: 1});
 
 ```
 
-13. 按照年龄排序
+* 按照年龄排序
 
 ``` sh
 
@@ -297,7 +297,7 @@ db.userInfo.find({age: {$gt: 25}}, {name: 1, age: 1});
 
 ```
 
-14. 查询name = zhangsan, age = 22的数据
+* 查询name = zhangsan, age = 22的数据
 
 ``` sh
 
@@ -307,7 +307,7 @@ db.userInfo.find({name: 'zhangsan', age: 22});
 
 ```
 
-15. 查询前5条数据
+* 查询前5条数据
 
 ``` sh
 
@@ -317,7 +317,7 @@ db.userInfo.find().limit(5);
 
 ```
 
-16. 查询10条以后的数据
+* 查询10条以后的数据
 
 ``` sh
 
@@ -331,7 +331,7 @@ select top 10 * from userInfo
 
 ```
 
-17. 查询在5-10之间的数据
+* 查询在5-10之间的数据
 
 ``` sh
 
@@ -341,7 +341,7 @@ db.userInfo.find().limit(10).skip(5);
 
 ```
 
-18. or与 查询
+* or与 查询
 
 ``` sh
 
@@ -351,7 +351,7 @@ db.userInfo.find({$or: [{age: 22}, {age: 25}]});
 
 ```
 
-19. 查询第一条数据
+* 查询第一条数据
 
 ``` sh
 
@@ -363,7 +363,7 @@ db.userInfo.find().limit(1);
 
 ```
 
-20. 查询某个结果集的记录条数
+* 查询某个结果集的记录条数
 
 ``` sh
 
@@ -377,7 +377,7 @@ db.users.find().skip(10).limit(5).count(true);
 
 ```
 
-21. 按照某列进行排序
+* 按照某列进行排序
 
 ``` sh
 
@@ -391,7 +391,6 @@ db.userInfo.find({sex: {$exists: true}}).count();
 
 1. 创建索引
 > db.userInfo.ensureIndex({name: 1});
-
   > db.userInfo.ensureIndex({name: 1, ts: -1});
 
 2. 查询当前聚集集合所有索引
@@ -411,7 +410,7 @@ db.userInfo.find({sex: {$exists: true}}).count();
 
 ## 修改、添加、 删除集合数据
 
-1. 添加insert() 或 save() 
+* 添加insert() 或 save() 
 
 ``` sh
 
@@ -421,7 +420,7 @@ db.users.insert({name: ‘zhangsan’, age: 25, sex: true});
 
 ```
 
-2. 修改
+* 修改
 
 ``` sh
 
@@ -452,7 +451,7 @@ db.users.update({name: 'Lisi'}, {$inc: {age: 50}, $set: {name: 'hoho'}}, false, 
 
 ```
 
-3. 删除
+* 删除
 
 ``` sh
 
@@ -460,7 +459,7 @@ db.users.remove({age: 132});
 
 ```
 
-4. 查询修改删除
+* 查询修改删除
 
 ``` sh
 
