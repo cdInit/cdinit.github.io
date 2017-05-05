@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "使用gulp实现前端自动化部署"
-categories: gulp
-tags: gulp
+title:  "使用webpack实现生成html时自动生成环境链接"
+categories: webpack
+tags: webpack
 author: Init
 ---
 
