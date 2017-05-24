@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "css显示省略号&css中string显示多个空格"
-categories: css
-tags: css
+categories: CSS
+tags: CSS
 author: Init
 ---
 
