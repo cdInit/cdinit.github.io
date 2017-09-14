@@ -18,7 +18,7 @@ author: Init
 
 配置参考官网：[github文档](https://github.com/webpack/docs/wiki/list-of-plugins#dllplugin)
 
-在build文件夹中新建dll.conf.js文件，我这里是需要将echarts和elementui单独打包成单独的文件
+在build文件夹中新建dll.conf.js文件，我这里是需要将echarts和xxxx单独打包成单独的文件
 
 ``` sh
 var path = require('path')
@@ -30,17 +30,17 @@ module.exports = {
     echarts: [
       'echarts'
     ],
-    element:[
-      'element-ui'
+    xxxx:[
+      'xxxx'
     ]
   },
-  //配置出口，这里将会把生成出来的dll文件放在/static/js中，会生成两个文件，echarts.dll.js，element.dll.js
+  //配置出口，这里将会把生成出来的dll文件放在/static/js中，会生成两个文件，echarts.dll.js，xxxx.dll.js
   output: {
     path: path.resolve(__dirname, '../static/js'),
     filename: '[name].dll.js',
     library: '[name]_library'
   },
-  //生成 manifest.json文件，会生成两个文件到build目录中，echarts-manifest.json，element-manifest.json
+  //生成 manifest.json文件，会生成两个文件到build目录中，echarts-manifest.json，xxxx-manifest.json
   plugins: [    
     new webpack.DllPlugin({
       path: path.join(__dirname, '.', '[name]-manifest.json'),     
@@ -70,7 +70,7 @@ webpack --config build/dll.conf.js
 ``` sh
 new webpack.DllReferencePlugin({
     context: __dirname,
-    manifest: merge(require('./echarts-manifest.json'),require('./element-manifest.json'))
+    manifest: merge(require('./echarts-manifest.json'),require('./xxxx-manifest.json'))
 })  
 ```
 
@@ -94,7 +94,7 @@ new webpack.DllReferencePlugin({
   </div>
   <!-- 引入第三方库 -->
   <script src="<%= webpackConfig.output.publicPath %>static/js/echarts.dll.js"></script>
-  <script src="<%= webpackConfig.output.publicPath %>static/js/element.dll.js"></script>
+  <script src="<%= webpackConfig.output.publicPath %>static/js/xxxx.dll.js"></script>
 </body>
 
 </html>
@@ -102,7 +102,7 @@ new webpack.DllReferencePlugin({
 
 ## 再次打包查看效果
 
-再次执行 npm run build 命令，我们可以看到之前vendor.js中的echarts和elementui已经被分离出来了，vendor.js也没有那么大了。
+再次执行 npm run build 命令，我们可以看到之前vendor.js中的echarts和xxxx已经被分离出来了，vendor.js也没有那么大了。
 
 ## 思考
 
