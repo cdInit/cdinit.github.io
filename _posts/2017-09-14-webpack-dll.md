@@ -9,7 +9,7 @@ author: Init
 * content
 {:toc}
 
-使用vue-cli默认配置打包项目的时候，会将用到的第三方库全部打包到vendor.js中，以至于vendor.js特别的大，LZ项目的vendor.js一度达到1.4M，打包的时候特别慢，所以想把一些比较大的库打包到单独的文件中，提高打包效率。这里我们使用 DllPlugin 和 DllReferencePlugin 达到想要的目的。
+使用vue-cli默认配置打包项目的时候，会将用到的第三方库全部打包到vendor.js中，以至于vendor.js特别的大，LZ项目的vendor.js一度达到1.4M，打包的时候特别慢，所以想把一些比较大的库打包到单独的文件中，提高打包效率。这里我们使用 DllPlugin 和 DllReferencePlugin 达到想要的目的
 
 
 
