@@ -234,6 +234,10 @@ docker run -d -p 8090:8080 cdinit/test
 
 [Docker学习笔记之二，基于Dockerfile搭建JAVA Tomcat运行环境](http://www.blogjava.net/yongboy/archive/2013/12/16/407643.html)
 
+[Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+
+[Docker学习笔记（3）-- 如何使用Dockerfile构建镜像](http://blog.csdn.net/we_shell/article/details/38445979)
+
 一些例子
 
 http://dockerfile.github.io/
@@ -245,3 +249,4 @@ https://github.com/eugeneware/docker-wordpress-nginx
 https://github.com/gemnasium/rails-meets-docker
 
 https://docs.docker.com/engine/reference/builder/
+
