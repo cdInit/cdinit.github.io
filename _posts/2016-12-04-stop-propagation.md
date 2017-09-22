@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "stopPropagation, preventDefault 和 return false"
-categories: js
-tags:  js event
+categories: javascript
+tags:  javascript event
 author: Init
 ---
 
