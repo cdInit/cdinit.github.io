@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "docker的安装以及常用命令"
+title:  "Docker的安装以及常用命令"
 categories: docker
 tags: docker
 author: Init
