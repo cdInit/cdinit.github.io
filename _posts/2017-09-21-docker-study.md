@@ -171,7 +171,7 @@ docker run -dit -v /home:/home -p 80:80  cdinit/node /bin/bash
 docker network -o "com.docker.network.bridge.name"="docker1" --subnet 172.20.0.0/16 docker1
 新建一个容器并指定ip
 docker run --network=docker1 --ip=172.20.0.188 -itd --name=node3 cdinit/centos-node
-安装net-tools
+进入docker并安装net-tools
 yum install -y net-tools
 查看ip
 ifconfig
