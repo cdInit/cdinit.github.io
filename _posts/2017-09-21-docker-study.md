@@ -161,10 +161,20 @@ docker run -dit -v /home:/home -p 80:80  cdinit/node /bin/bash
 
 #### 容器指定ip地址
 
-//TODO 
+(官方文档在这里)[https://docs.docker.com/engine/userguide/networking/work-with-networks/#create-networks]
 
 ``` sh
-方便程序在多个容器之间的访问
-....
 
+方便程序在多个容器之间的访问
+
+创建一个名为docker1的网络
+docker network -o "com.docker.network.bridge.name"="docker1" --subnet 172.20.0.0/16 docker1
+新建一个容器并指定ip
+docker run --network=docker1 --ip=172.20.0.188 -itd --name=node3 cdinit/centos-node
+安装net-tools
+yum install -y net-tools
+查看ip
+ifconfig
+
+可以看见ip已经为设置的ip了
 ```
