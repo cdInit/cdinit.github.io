@@ -83,7 +83,7 @@ docker ps -a
 docker run -idt centos /bin/bash
 ```
 
-[docker run 命令参数及使用](http://blog.csdn.net/alen_xiaoxin/article/details/54694051)
+[docker run 命令参数及使用](http://www.cdinit.com/2017/09/21/docker-run/)
 
 #### 7.给容器改名
 
