@@ -17,12 +17,15 @@ author: Init
 
 ## 1、npm依赖文件
 
+``` sh
 npm install --save-dev stream-combiner2
 npm install --save-dev gulp-uglify
 npm install --save-dev gulp
 npm install --save-dev minimist
 npm install --save-dev gulp-ssh
 npm install --save-dev del
+npm install -g gulp
+```
 
 使用到的主要是gulp和gulp-ssh
 
