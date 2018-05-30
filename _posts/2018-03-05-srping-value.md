@@ -146,3 +146,36 @@ public class Configs {
 ```
 
 这里需要注意这个Bean一定要给spring管理，否则即使加了@PropertySource注解，仍然无法获取到配置文件中的值。
+
+### 给静态变量赋值
+
+```
+
+@Component
+@PropertySource("classpath:websoket.properties")
+public class NoticeWebsoketUtils {
+    private static String webSocketServer;
+    @Value(value = "${websocketServer}")
+    public void setWebSocketServer(String url) {
+        NoticeWebsoketUtils.webSocketServer = url;
+    }
+    public static void sendMsgToWebSocketServer(String token,String msg){
+        // {"type":"1","msg":"Client test!"}
+        WebSocketContainer container = ContainerProvider.getWebSocketContainer();
+        Session session = null;
+        try {
+            session = container.connectToServer(NoticeWebsoketClient.class,
+                    new URI(webSocketServer + token));
+            session.getBasicRemote().sendText(msg);
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                session.close();
+            } catch (IOException e) {
+
+            }
+        }
+    }
+}
+```
