@@ -120,3 +120,29 @@ public class ValueDemo {
 ```
 
 然后使用 @Value 获取属性值
+
+### 使用@PropertySource
+
+```
+@Component
+@PropertySource(value = {"classpath:test1.properties", "classpath:test2.properties"})
+public class Configs {
+
+    @Value("${test1.test}")
+    public String apiKeyId;
+
+    @Value("${test2.test}")
+    public String secretApiKey;
+
+    public String getApiKeyId() {
+        return apiKeyId;
+    }
+
+    public String getSecretApiKey() {
+        return secretApiKey;
+    }
+}
+
+```
+
+这里需要注意这个Bean一定要给spring管理，否则即使加了@PropertySource注解，仍然无法获取到配置文件中的值。
