@@ -16,7 +16,7 @@ author: Init
 
 
 ### 开启aop自动扫描
-```
+``` java
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -68,7 +68,7 @@ author: Init
 具体的原因参见 [Spring和SpringMVC父子容器关系初窥](https://www.cnblogs.com/hafiz/p/5875740.html)
 
 ### 实现切面
-```
+``` java
 package com.cdrcb.dmschedule.aspect;
 
 import org.aspectj.lang.annotation.*;

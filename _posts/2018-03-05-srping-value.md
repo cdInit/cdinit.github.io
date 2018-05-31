@@ -32,7 +32,7 @@ spring支持使用@Value注解的方式来读取properties文件中的配置值
 
 #### 配置文件：
 
-```
+``` java
 配置方法1：  
 <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">  
     <property name="locations">  
@@ -56,7 +56,7 @@ key=1
 ValueDemo.java
 ```
 
-```
+``` java
 @Component  
 public class ValueDemo {  
     @Value("#{configProperties['key']}")  
@@ -71,7 +71,7 @@ public class ValueDemo {
 
 #### 配置文件
 
-```
+``` java
 <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">  
     <property name="locations">  
         <list>  
@@ -86,7 +86,7 @@ public class ValueDemo {
 ```
 
 #### 直接指定配置文件，完整的配置：
-```
+``` java
 <bean id="appProperty"  
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
     <property name="locations">  
@@ -97,7 +97,7 @@ public class ValueDemo {
 </bean>  
 ```
 
-```
+``` java
 // ValueDemo.java
 @Component  
 public class ValueDemo {  
@@ -111,7 +111,7 @@ public class ValueDemo {
 
 ### 使用自动扫描
 
-```
+``` java
 <context:property-placeholder location="classpath:config/jdbc.properties"/>
 
 //如果有多个配置文件,多个文件之间以“,”分隔，如下：
@@ -123,7 +123,7 @@ public class ValueDemo {
 
 ### 使用@PropertySource
 
-```
+``` java
 @Component
 @PropertySource(value = {"classpath:test1.properties", "classpath:test2.properties"})
 public class Configs {
@@ -149,7 +149,7 @@ public class Configs {
 
 ### 给静态变量赋值
 
-```
+``` java
 
 @Component
 @PropertySource("classpath:websoket.properties")

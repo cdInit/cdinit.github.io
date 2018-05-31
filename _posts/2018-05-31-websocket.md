@@ -19,7 +19,7 @@ author: Init
 
 pom文件中添加需要的包
 
-```
+``` java
 <!--websocket-->
 <dependency>
     <groupId>javax.websocket</groupId>
@@ -37,7 +37,7 @@ pom文件中添加需要的包
 
 ### 修改web.xml
 
-```
+``` java
 <!-- 解决websoket被拦截的问题 -->
 
 <web-app version="3.0"
@@ -147,7 +147,7 @@ pom文件中添加需要的包
 
 ### 编写NoticeWebsoket
 
-```
+``` java
 import com.alibaba.fastjson.JSONObject;
 import com.cdrcb.dmschedule.entity.dto.AuthDto;
 import com.cdrcb.dmschedule.entity.po.Notice;
@@ -245,7 +245,7 @@ public class NoticeWebsoket {
 主要涉及到NoticeWebsoketClient的编写，原理就是java生成一个websoket客户端来向服务端发起消息
 
 
-```
+``` java
 // NoticeWebsoketClient
 
 package com.cdrcb.dmschedule.websocket;
@@ -277,7 +277,7 @@ public class NoticeWebsoketClient {
 
 客户端连接服务端的单元测试
 
-```
+``` java
 import javax.websocket.Session;
 @Test
 public void testMessage(){
@@ -304,7 +304,7 @@ public void testMessage(){
 
 ### 网页中的应用
 
-```
+``` html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
