@@ -42,6 +42,7 @@ dubbo-web | war
 6. [dubbo-admin](https://github.com/apache/incubator-dubbo-ops) 可以实时查看服务提供方和消费者
 
 PS:7.11
+
 今天看见classpath和classpath*的区别，[Spring配置中的"classpath:"与"classpath*:"的区别研究（转）](https://www.cnblogs.com/EasonJim/p/6709314.html)
 
 ```
