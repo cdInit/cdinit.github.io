@@ -122,3 +122,19 @@ log4j.appender.after_loan.layout.ConversionPattern=[%d] [%p] [%c:%L] : %m%n
 log4j.appender.after_loan.encoding=UTF-8
 
 ```
+
+### 其他
+
+如果还不行，尝试在web.xml中添加 
+
+```
+
+<context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:log4j.properties</param-value>
+</context-param>
+<listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+</listener>
+
+```
