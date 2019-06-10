@@ -68,6 +68,15 @@ System.out.println(p);
 
 ```
 
+### @DependsOn
+
+``` java
+
+// 依赖于某个java bean的创建而创建
+@DependsOn({"xxxx"})
+
+```
+
 ### @ComponentScan
 
 #### 基本用法
