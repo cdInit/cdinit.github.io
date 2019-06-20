@@ -15,7 +15,13 @@ author: Init
 
 > Mybatis配置文件之plugins使用
 
-> ...
+> #{} ${}
+
+> resultMap constructor调用构造函数
+
+> include
+
+> 动态sql
 
 
 
