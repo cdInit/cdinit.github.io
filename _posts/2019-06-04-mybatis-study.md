@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mybatis学习记录"
+title:  "Mybatis资料收集"
 categories: java
 tags: java
 author: Init
