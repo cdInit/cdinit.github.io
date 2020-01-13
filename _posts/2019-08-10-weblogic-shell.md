@@ -25,5 +25,5 @@ java weblogic.Deployer -adminurl t3://192.168.134.166:7001 -user weblogic -passw
 ```
 
 参考：
-# [使用Linux脚本更新Weblogic部署的应用程序](https://blog.csdn.net/yulei_qq/article/details/53318355)
-# [jiaozhu](https://github.com/jiaozhu)/**[autoDeploy](https://github.com/jiaozhu/autoDeploy)**
+### [使用Linux脚本更新Weblogic部署的应用程序](https://blog.csdn.net/yulei_qq/article/details/53318355)
+### [jiaozhu](https://github.com/jiaozhu)/**[autoDeploy](https://github.com/jiaozhu/autoDeploy)**
